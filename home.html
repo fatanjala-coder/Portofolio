@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Portofolio</title>
+</head>
+<script>
+  document.querySelectorAll('.item').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = this.href;
+
+      document.body.style.opacity = '0';
+      document.body.style.transform = 'translateY(10px)';
+      document.body.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+      setTimeout(() => {
+        window.location.href = target;
+      }, 300);
+    });
+  });
+</script>
+<body>
+    <nav class="nav">
+        <a class="nav-logo" href="#">namamu.dev</a>
+        <div style="display:flex; gap:28px;">
+            <a href="home.html" class="item active">Home</a>
+            <a class="item " href="About.html">Tentang</a>
+            <a class="item " href="Project.html">Project</a>
+            <a class="item " href="Kontak.html">Kontak</a>
+        </div>
+    </nav>
+    <div class="Container Center">
+        <div class="circle"></div>
+        <p class="Text">Bersedia Untuk Berkolaborasi</p>
+    </div>
+
+    <h1>Hai, Saya</h1>
+    <h1 class="Top Gradasi">Rakean Fatanjala Drajat</h1>
+
+    <div class="navi">
+        <div class="bar pelajar">Pelajar</div>
+        <div class="bar front">Frontend Developer</div>
+        <div class="bar ui">UI/UX Developer</div>
+    </div>
+
+    <p class="aboutme">Pelajar yang antusias dalam bidang teknologi dan pengembangan web, dengan semangat belajar tinggi serta komitmen untuk terus berkembang melalui proyek dan pengalaman baru.</p>
+
+    <div class="about">
+        <a href="Project.html" class="projek">Lihat Projek Saya</a>
+        <a href="Kontak.html" class="hub">Hubungi Saya</a>
+    </div>
+    <hr class="divider">
+
+    <section id="about">
+  <p class="section-label">Tentang Saya</p>
+  <h2 class="section-title">Siapa saya?</h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Saya seorang <strong>pelajar yang passionate</strong> di bidang teknologi dan desain. Sejak mulai belajar coding, saya selalu tertarik pada pertemuan antara <strong>logika dan estetika</strong> — bagaimana sebuah antarmuka bisa terasa intuitif sekaligus indah.</p>
+      <br>
+      <p>Di luar coding, saya suka eksplorasi <strong>desain UI/UX</strong>, membuat prototype di Figma, dan belajar hal-hal baru setiap hari.</p>
+    </div>
+
+    <div class="about-stats">
+      <div class="stat-card"><div class="stat-num" style="color:#C4B5FD;">5+</div><div class="stat-label">Project selesai</div></div>
+      <div class="stat-card"><div class="stat-num" style="color:#7DD3FC;">3</div><div class="stat-label">Bahasa pemrograman</div></div>
+      <div class="stat-card"><div class="stat-num" style="color:#FED7AA;">1th</div><div class="stat-label">Pengalaman belajar</div></div>
+      <div class="stat-card"><div class="stat-num" style="color:#FBCFE8;">∞</div><div class="stat-label">Semangat belajar</div></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
